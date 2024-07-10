@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 100;
+            padding: 30;
+            font-family: Arial, sans-serif;
+            background-image: url('download20.jpg'); /* no repeat center  with your image file */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to improve readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="weather-info">
+            <div id="weather-display">
+                <h2 id="city-name">Coimbatore Today </h2>
+                <p id="temperature">Temperature: 26°C</p>
+                <p id="description">Condition: Mist</p>
+                <p id="humidity">Humidity: 81%</p>
+                <p id="wind">Wind: 18 kph</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Simulate fetching weather data for Coimbatore
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Normally you would fetch this data from a weather API
+            const weatherData = {
+                city: 'Coimbatore',
+                temperature: '26°C',
+                description: 'Mist',
+                humidity: '81%',
+                wind: '18 kph'
+            };
+            
+            document.getElementById('city-name').textContent = weatherData.city;
+            document.getElementById('temperature').textContent = `Temperature: ${weatherData.temperature}`;
+            document.getElementById('description').textContent = `Condition: ${weatherData.description}`;
+            document.getElementById('humidity').textContent = `Humidity: ${weatherData.humidity}`;
+            document.getElementById('wind').textContent = `Wind: ${weatherData.wind}`;
+        });
+    </script>
+</body>
+</html>
